@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #020c0c;
+    --primary-color: #051111;
     --secondary-color: #7a1010;
     --tertiary-color: #f4f7f1f6;
 }
@@ -19,7 +19,7 @@ header {
     padding: 20px 35px;
     background-color: var(--secondary-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
@@ -55,6 +55,13 @@ header nav ul {
     list-style: none;
 }
 
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55w;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 header nav ul li a:hover {
     background: var(--tertiary-color);
     color: var(--secondary-color);
@@ -63,11 +70,11 @@ header nav ul li a:hover {
 }
 
 footer {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -75,6 +82,15 @@ footer h2 {
     color: var(--tertiary-color);
     font-size: 30px;
     margin: 0;
+    text-align: left;
+}
+
+footer div p a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55w;
+    text-shadow: 0 0 10px rgba(184, 10, 10, 0.5);
+    text-align: center;
 }
 
 footer a {
@@ -109,13 +125,17 @@ footer a {
   }
 
   .hero {
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: 80%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: flex-start;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .hero:not(:last-child) {
+      border-bottom: 1px solid var(--secondary-color);
   }
 
   .hero-cta {
@@ -155,6 +175,17 @@ footer a {
       text-decoration: none;
   }
 
+  .hero div img {
+      border: 19px solid var(--secondary-color);
+      padding: 10px;
+      width: 50%;
+      border-radius: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+  }
+
 /* about me */
   .intro p {
       line-height: 1.7;
@@ -181,7 +212,7 @@ footer a {
 /* projects */
   .projects {
       width: 100%;
-      margin: 0 auto;
+      margin: auto 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -194,13 +225,15 @@ footer a {
       flex: 1;
   }
 
-  .project video {
-      width: 100%;
-  }
-
   .some-projects {
       padding: 25px;
       line-height: 1.3;
+  }
+
+  .project-name {
+      color: var(--tertiary-color);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
   }
 
   .text-left {
@@ -333,9 +366,7 @@ footer a {
         width: 80%;
     }
 
-    .project {
-        flex: 0 70%;
-    }
+    
 }
 
 /* for tablets */
